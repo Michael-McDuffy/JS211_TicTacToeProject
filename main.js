@@ -22,7 +22,7 @@ let board = [
 // using let because the variable is expected to change from 'X' to 'O' and back
 let playerTurn = 'X'; {
   if (playerTurn === 'X'); {
-
+    switch
   }
 }
 
@@ -60,7 +60,7 @@ const verticalWin = () => {
   }
   
 }
-
+// npm test main.js
 const diagonalWin = () => {
   // Your code here to check for diagonal wins
   if (board[0][0] === 'X' && board[1][1] === 'X' && board[2][2] === 'X') {
@@ -74,7 +74,9 @@ const diagonalWin = () => {
 
 const checkForWin = () => {
   // Your code here call each of the check for types of wins
- if ()
+ if (board === diagonalWin, horizontalWin, verticalWin) {
+   return true
+ }
   
 }
 
