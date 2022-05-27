@@ -1,5 +1,5 @@
 'use strict';
-
+// npm test main.js
 // brings in the assert module for unit testing
 const assert = require('assert');
 // brings in the readline module to access the command line
@@ -20,11 +20,13 @@ let board = [
 
 // assigns the first mark as 'X'
 // using let because the variable is expected to change from 'X' to 'O' and back
-let playerTurn = 'X'; {
-  if (playerTurn === 'X'); {
-    switch
-  }
-}
+let playerTurn = 'X';
+
+
+
+
+
+
 
 // is a function that print the current status of the board using the variable - board
 const printBoard = () => {
@@ -38,29 +40,43 @@ const printBoard = () => {
 
 const horizontalWin = () => {
   // Your code here to check for horizontal wins
-  if (board[0][0, 1, 2]){
-    return true
-  } else if (board[1][0, 1, 2]){
-    return true
-  }else if (board[2][0, 1, 2]){
-    return true
-  }
+ for (let i = 0; i < board.length; i++) {
+  //  console.log(board.length[i].join(""));
+   if (board[i].join("") === "XXX" || board[i].join("") === "OOO"){
+     return true
+   }
+ }
+  // if (board[0][0, 1, 2]){
+  //   return true
+  // } else if (board[1][0, 1, 2]){
+  //   return true
+  // }else if (board[2][0, 1, 2]){
+  //   return true
+  // }
 
 }
 
 const verticalWin = () => {
   // Your code here to check for vertical wins
-  if (board[0][0] === 'X' && board[1][0] === 'X' && board[2][0] === 'X') {
+  for (let i = 0; i < board.length; i++) {
+    if (+
+       (board[0][i] === 'X' && board[1][i] === 'X' && board[2][i] === 'X')) {
+        (board[0][i] === 'O' && board[1][i] === 'O' && board[2][i] === 'O')
     
-    return true
-  } else if (board[0][1] === 'X' && board[1][1] === 'X' && board[2][1] === 'X') {
-    return true
-  } else if (board[0][2] === 'X' && board[1][2] === 'X' && board[2][2] === 'X'){
-    return true
+           return true;
   }
+  // if (board[0][0] === 'X' && board[1][0] === 'X' && board[2][0] === 'X') {
+    
+  //   return true
+  // } else if (board[0][1] === 'X' && board[1][1] === 'X' && board[2][1] === 'X') {
+  //   return true
+  // } else if (board[0][2] === 'X' && board[1][2] === 'X' && board[2][2] === 'X'){
+  //   return true
+  // }
   
 }
-// npm test main.js
+}
+
 const diagonalWin = () => {
   // Your code here to check for diagonal wins
   if (board[0][0] === 'X' && board[1][1] === 'X' && board[2][2] === 'X') {
@@ -83,9 +99,18 @@ const checkForWin = () => {
 const ticTacToe = (row, column) => {
   // Your code here to place a marker on the board
   // then check for a win
-  board[row][column] = playerTurn
-  if (board === 'X' );
-}
+  board[row][column] = 'X'
+
+  if(board[1][1] = 'X');{
+    playerTurn = board[0][0] = 'O'
+    
+
+  }
+  
+  
+    
+  }
+
 
 const getPrompt = () => {
   printBoard();
